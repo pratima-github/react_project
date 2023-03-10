@@ -8,7 +8,10 @@ function App() {
   const [userData, setUserData] = useState([]);
   const saveFormData = (uName, uAge) => {
     setUserData((prevUserList) => {
-      return [...prevUserList, { name: uName, age: uAge }];
+      return [
+        ...prevUserList,
+        { name: uName, age: uAge, id: Math.random().toString() },
+      ];
     });
     console.log(uName, uAge);
   };
